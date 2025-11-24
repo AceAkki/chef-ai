@@ -9,13 +9,19 @@ export function Section() {
   });
 
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    let formData = new FormData(event.currentTarget);
-    let newIngredient = formData.get("ingredient");
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   let formData = new FormData(event.currentTarget);
+  //   let newIngredient = formData.get("ingredient");
+  //   setIngredients(oldIngredients => [...oldIngredients, newIngredient])
+  //   // ingredients.push(newIngredient);
+  //   // console.log("form submitted", ingredients);
+  // }
+  
+  function getIngredients(formData) {
+    const newIngredient = formData.get("ingredient");
+    console.log(newIngredient)
     setIngredients(oldIngredients => [...oldIngredients, newIngredient])
-    // ingredients.push(newIngredient);
-    // console.log("form submitted", ingredients);
   }
 
   return (
@@ -28,7 +34,8 @@ export function Section() {
       </section>
 
       <section className="main-section">
-        <form className="add-ingredient-form" onSubmit={handleSubmit}>
+        <form className="add-ingredient-form" action={getIngredients}>
+        {/* <form className="add-ingredient-form" onSubmit={handleSubmit}> */}
           <input
             type="text"
             placeholder="eg. oregano"
