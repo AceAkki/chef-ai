@@ -46,8 +46,21 @@ export function Section() {
         </form>
 
         <section>
-          <h2 className="ingre-title"></h2>
+          <h2 className="ingre-title">ingredients on hand</h2>
           <ul>{ingredientsList}</ul>
+
+          <div className="get-recipe-container">
+            <div>
+              <h3>
+                Ready for a Recipe ?
+              </h3>
+              <p>Generate recipe based on the ingredients.</p>
+            </div>
+            <button>
+              Get a recipe !
+            </button>
+
+          </div>
         </section>
       </section>
      
