@@ -24,6 +24,26 @@ export function Section() {
     setIngredients(oldIngredients => [...oldIngredients, newIngredient])
   }
 
+  function loadSection() {
+    return (ingredientsList.length > 0) ? (<section>
+          <h2 className="ingre-title">ingredients on hand</h2>
+          <ul>{ingredientsList}</ul>
+
+          <div className="get-recipe-container">
+            <div>
+              <h3>
+                Ready for a Recipe ?
+              </h3>
+              <p>Generate recipe based on the ingredients.</p>
+            </div>
+            <button>
+              Get a recipe !
+            </button>
+
+          </div>
+        </section>) : null
+  }
+
   return (
     <main>
       <section className="image-section" onMouseOver={hover}>
@@ -45,23 +65,7 @@ export function Section() {
           <button> Add Ingredient </button>
         </form>
 
-        <section>
-          <h2 className="ingre-title">ingredients on hand</h2>
-          <ul>{ingredientsList}</ul>
-
-          <div className="get-recipe-container">
-            <div>
-              <h3>
-                Ready for a Recipe ?
-              </h3>
-              <p>Generate recipe based on the ingredients.</p>
-            </div>
-            <button>
-              Get a recipe !
-            </button>
-
-          </div>
-        </section>
+        {loadSection()}
       </section>
      
     </main>
