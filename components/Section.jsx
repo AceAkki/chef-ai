@@ -7,11 +7,6 @@ export function Section() {
   const [ingredients, setIngredients] = useState([]);
   //let ingredients = ["tomato", "apple", "peach", "carrot"];
  
-  let ingredientsElem = ingredients.map((ingre) => {
-    return <li key={ingre}>{ingre}</li>;
-  });
-
-
   // function handleSubmit(event) {
   //   event.preventDefault();
   //   let formData = new FormData(event.currentTarget);
@@ -33,11 +28,6 @@ export function Section() {
     setRecipeShown(prev => !prev);
   }
 
-  function loadSection() {
-    return (ingredientsElem.length > 0) ? (
-      <IngredientsSection list={ingredientsElem} func={showRecipe}/>
-    ) : null
-  }
 
   return (
     <main>
@@ -60,7 +50,7 @@ export function Section() {
           <button> Add Ingredient </button>
         </form>
 
-        {loadSection()}
+        { <IngredientsSection ingredients={ingredients} showRecipe={showRecipe}/>}
       </section>
 
       {(recipeShown) ? <AIRecipe /> : null }
