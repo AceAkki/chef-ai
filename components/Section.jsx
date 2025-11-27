@@ -1,10 +1,13 @@
 import { useState } from "react";
 
+import { AIRecipe } from "./AIRecipe";
+import IngredientsSection from "./IngredientsSection";
+
 export function Section() {
-  const [ingredients, setIngredients] = useState(["tomato", "apple", "peach", "oregano"]);
-  //let ingredients = ["tomato", "apple", "peach"];
+  const [ingredients, setIngredients] = useState([]);
+  //let ingredients = ["tomato", "apple", "peach", "carrot"];
  
-  let ingredientsList = ingredients.map((ingre) => {
+  let ingredientsElem = ingredients.map((ingre) => {
     return <li key={ingre}>{ingre}</li>;
   });
 
@@ -31,27 +34,9 @@ export function Section() {
   }
 
   function loadSection() {
-    return (ingredientsList.length > 0) ? (<section>
-          <h2 className="ingre-title">ingredients on hand</h2>
-          <ul>{ingredientsList}</ul>
-          {loadPrompt()}
-
-        </section>) : null
-  }
-
-  function loadPrompt() {
-    return (ingredientsList.length >= 4) ? <div className="get-recipe-container">
-            <div>
-              <h3>
-                Ready for a Recipe ?
-              </h3>
-              <p>Generate recipe based on the ingredients.</p>
-            </div>
-            <button onClick={showRecipe}>
-              Get a recipe !
-            </button>
-
-          </div> : null
+    return (ingredientsElem.length > 0) ? (
+      <IngredientsSection list={ingredientsElem} func={showRecipe}/>
+    ) : null
   }
 
   return (
@@ -78,39 +63,7 @@ export function Section() {
         {loadSection()}
       </section>
 
-      {
-        (recipeShown) ? <section>
-        <h2>
-          Chef AI recommends:
-        </h2>
-        <article>
-          <p>
-            based on available ingredients following is the 
-          </p>
-          <h3>recipe name</h3>
-          <strong>ingredients</strong>
-          <ul>
-            <li>one</li>
-            <li>one</li>
-            <li>one</li>
-            <li>one</li>
-            <li>one</li>
-            <li>one</li>
-          </ul>
-
-          <strong>instructions</strong>
-          <ol>
-            <li>one</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, provident dolorem et accusantium possimus, numquam veniam autem nobis, voluptatibus facilis esse placeat ullam necessitatibus ea voluptates exercitationem perferendis quaerat amet.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, provident dolorem et accusantium possimus, numquam veniam autem nobis, voluptatibus facilis esse placeat ullam necessitatibus ea voluptates exercitationem perferendis quaerat amet.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, provident dolorem et accusantium possimus, numquam veniam autem nobis, voluptatibus facilis esse placeat ullam necessitatibus ea voluptates exercitationem perferendis quaerat amet.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, provident dolorem et accusantium possimus, numquam veniam autem nobis, voluptatibus facilis esse placeat ullam necessitatibus ea voluptates exercitationem perferendis quaerat amet.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, provident dolorem et accusantium possimus, numquam veniam autem nobis, voluptatibus facilis esse placeat ullam necessitatibus ea voluptates exercitationem perferendis quaerat amet.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, provident dolorem et accusantium possimus, numquam veniam autem nobis, voluptatibus facilis esse placeat ullam necessitatibus ea voluptates exercitationem perferendis quaerat amet.</li>
-          </ol>
-        </article>
-      </section> : null 
-      }
+      {(recipeShown) ? <AIRecipe /> : null }
      
     </main>
   );

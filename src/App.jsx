@@ -14,14 +14,14 @@ export default function App () {
 
   return (
     <>
-      {/* <Header />
-      <Section /> */}
+      <Header />
+      <Section />
 
-      <Test />
-      <ProfileCard />
-      <ProfileMain />
-      <PadsMain 
-        darkmode={darkMode}/>
+      {/* <Test /> */}
+      {/* <ProfileCard />
+      <ProfileMain /> */}
+      {/* <PadsMain 
+        darkmode={darkMode}/> */}
       {/* <Form /> */}
     </>
   )
