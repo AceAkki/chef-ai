@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function Test (){
+export function Test1 (){
     const [want, setWant] = useState(true)
 
     function changeLang () {

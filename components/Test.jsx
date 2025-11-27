@@ -1,4 +1,5 @@
 import {useState} from "react"
+import { Count } from "./Test-Count"
 //import testImg from "https://cdn.pixabay.com/photo/2021/11/03/00/56/pizza-6764430_1280.jpg";
 
 export function Test() {
@@ -35,9 +36,9 @@ export function Test() {
 
 return (
     <section>
-        <div className="result">
-            {result}
-        </div>
+         <Count
+            num={result}
+         />
         <div>
          <button className="minus" onClick={minus}>minus</button>
          <button className="plus" onClick={plus}>plus</button>

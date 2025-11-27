@@ -1,5 +1,5 @@
 import { useState } from "react"
-import * as Icon from "@phosphor-icons/react";
+import { ProfileBtn } from "./ProfileBtn"
 
 export function ProfileCard () {
     const [contact, setContact] = useState({
@@ -23,16 +23,9 @@ export function ProfileCard () {
         <main>
             <article>
 
-                <button onClick={toggleFav}
-                 aria-label={contact.isFav ?  "remove from fav" : "add to fav"}
-                    aria-pressed={contact.isFav ? "Fav": "empty"}
-                >
-                   
-                     {contact.isFav ? 
-                     <Icon.Star size={32} weight="fill" /> : 
-                     <Icon.Star size={32} />}
-
-                </button>
+                <ProfileBtn 
+                    data={contact}
+                    fn={toggleFav}/>
 
                 <div>
                     <h2>

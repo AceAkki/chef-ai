@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function Test () {
+export function Test2 () {
     const [array, setArray] = useState([]);
     
     const mainArray = ["MT", "JK", "AP", "NR", "FB"]
