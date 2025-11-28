@@ -5,8 +5,10 @@ import IngredientsSection from "./IngredientsSection";
 
 export function Section() {
   const [ingredients, setIngredients] = useState([]);
+  const [recipeShown, setRecipeShown] = useState(false);
+
   //let ingredients = ["tomato", "apple", "peach", "carrot"];
- 
+  
   // function handleSubmit(event) {
   //   event.preventDefault();
   //   let formData = new FormData(event.currentTarget);
@@ -22,7 +24,6 @@ export function Section() {
     setIngredients(oldIngredients => [...oldIngredients, newIngredient])
   }
 
-  const [recipeShown, setRecipeShown] = useState(false);
 
   function showRecipe() {
     setRecipeShown(prev => !prev);

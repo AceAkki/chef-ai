@@ -4,56 +4,47 @@ export function AIRecipe() {
       <section>
         <h2>Chef AI recommends:</h2>
         <article>
-          <p>based on available ingredients following is the</p>
-          <h3>recipe name</h3>
-          <strong>ingredients</strong>
+          <p>
+            Based on available ingredients, here is a delicious recipe
+            suggestion:
+          </p>
+          <h3>Vegetable Stir-fry with Tofu</h3>
+
+          <strong>Ingredients</strong>
           <ul>
-            <li>one</li>
-            <li>one</li>
-            <li>one</li>
-            <li>one</li>
-            <li>one</li>
-            <li>one</li>
+            <li>1 block of firm tofu</li>
+            <li>1 red bell pepper, sliced</li>
+            <li>1 zucchini, sliced</li>
+            <li>1 carrot, julienned</li>
+            <li>2 tablespoons soy sauce</li>
+            <li>1 tablespoon olive oil</li>
           </ul>
 
-          <strong>instructions</strong>
+          <strong>Instructions</strong>
           <ol>
-            <li>one</li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-              provident dolorem et accusantium possimus, numquam veniam autem
-              nobis, voluptatibus facilis esse placeat ullam necessitatibus ea
-              voluptates exercitationem perferendis quaerat amet.
+              Press the tofu to remove excess moisture, then cut it into cubes.
             </li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-              provident dolorem et accusantium possimus, numquam veniam autem
-              nobis, voluptatibus facilis esse placeat ullam necessitatibus ea
-              voluptates exercitationem perferendis quaerat amet.
+              Heat olive oil in a large pan over medium heat. Add the tofu and
+              sauté until golden brown and crispy on all sides, about 5-7
+              minutes.
             </li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-              provident dolorem et accusantium possimus, numquam veniam autem
-              nobis, voluptatibus facilis esse placeat ullam necessitatibus ea
-              voluptates exercitationem perferendis quaerat amet.
+              Add the red bell pepper, zucchini, and carrot to the pan with the
+              tofu. Stir-fry for 3-4 minutes until the vegetables begin to
+              soften but still retain some crunch.
             </li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-              provident dolorem et accusantium possimus, numquam veniam autem
-              nobis, voluptatibus facilis esse placeat ullam necessitatibus ea
-              voluptates exercitationem perferendis quaerat amet.
+              Pour in the soy sauce and continue to stir-fry for another 2-3
+              minutes, allowing the flavors to meld together.
             </li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-              provident dolorem et accusantium possimus, numquam veniam autem
-              nobis, voluptatibus facilis esse placeat ullam necessitatibus ea
-              voluptates exercitationem perferendis quaerat amet.
+              Once the vegetables are tender and the tofu is coated in the
+              sauce, remove the stir-fry from the heat.
             </li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-              provident dolorem et accusantium possimus, numquam veniam autem
-              nobis, voluptatibus facilis esse placeat ullam necessitatibus ea
-              voluptates exercitationem perferendis quaerat amet.
+              Serve hot with a side of rice or noodles for a complete meal!
             </li>
           </ol>
         </article>
