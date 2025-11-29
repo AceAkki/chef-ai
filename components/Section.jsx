@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { AIRecipe } from "./AIRecipe";
 import IngredientsSection from "./IngredientsSection";
+import { getRecipeFromMistral } from "../src/ai"
 
 export function Section() {
   const [ingredients, setIngredients] = useState([]);

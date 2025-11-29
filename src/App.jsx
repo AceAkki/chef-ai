@@ -2,13 +2,13 @@ import React from "react"
 import { Header } from "../components/Header"
 import { Section } from "../components/Section"
 
-import { Test } from "../components/Test"
-import { Test1 } from "../components/Test1"
-import { Test2 } from "../components/Test2"
-import { ProfileCard } from "../components/ProfileCard"
-import { ProfileMain } from "../components/ProfileMain"
-import { PadsMain } from "../components/PadsMain"
-import { Form } from "../components/Form"
+import { Test } from "../components/Test/Test"
+import { Test1 } from "../components/Test/Test1"
+import { Test2 } from "../components/Test/Test2"
+import { ProfileCard } from "../components/Profile/ProfileCard"
+import { ProfileMain } from "../components/Profile/ProfileMain"
+import { Form } from "../components/Profile/Form"
+import { PadsMain } from "../components/Pad/PadsMain"
 export default function App () {
   const [darkMode, setDarkMode] = React.useState(true)
 

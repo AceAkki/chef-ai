@@ -1,5 +1,5 @@
 import React from "react"
-import pads from "../src/colorpads"
+import pads from "../../src/colorpads"
 import { Pad } from "./Pad"
 
 export function PadsMain(props){
