@@ -5,8 +5,8 @@ import IngredientsSection from "./IngredientsSection";
 import { getRecipeFromMistral } from "../src/ai"
 
 export function Section() {
-  const [ingredients, setIngredients] = useState([]);
-  const [recipeShown, setRecipeShown] = useState(false);
+  const [ingredients, setIngredients] = useState(["tomato", "apple", "peach", "carrot"]);
+  const [recipeShown, setRecipeShown] = useState("");
 
   //let ingredients = ["tomato", "apple", "peach", "carrot"];
   
@@ -26,8 +26,9 @@ export function Section() {
   }
 
 
-  function showRecipe() {
-    setRecipeShown(prev => !prev);
+  async function showRecipe() {
+    setRecipeShown(await getRecipeFromMistral(ingredients));
+    console.log(recipeShown, getRecipeFromMistral(ingredients))
   }
 
 
@@ -55,7 +56,7 @@ export function Section() {
         { <IngredientsSection ingredients={ingredients} showRecipe={showRecipe}/>}
       </section>
 
-      {(recipeShown) ? <AIRecipe /> : null }
+      {(recipeShown.length > 0) ? <AIRecipe recipeData={recipeShown} /> : null }
      
     </main>
   );

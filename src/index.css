@@ -65,6 +65,19 @@ main img {
   margin-right: 0.2rem;
 }
 
+.recipe-container {
+  align-self: flex-start;
+}
+
+.prompt-api-btn {
+  background: #213547;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-family: Inter, san-serif;
+  outline: none;
+  color: #f9f9f9;
+}
+
 .pads-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

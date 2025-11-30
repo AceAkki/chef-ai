@@ -1,8 +1,19 @@
-export function AIRecipe() {
+import Markdown from 'react-markdown'
+
+export function AIRecipe(props) {
+  console.log(props.recipeData)
   return (
     <>
-      <section>
+    <section className='recipe-container'>
+     <h2>Chef AI recommends:</h2>
+      <Markdown>{props.recipeData}</Markdown>
+
+    </section>
+      {/* <section>
         <h2>Chef AI recommends:</h2>
+        <article>
+          {props.recipeData}
+        </article>
         <article>
           <p>
             Based on available ingredients, here is a delicious recipe
@@ -48,7 +59,7 @@ export function AIRecipe() {
             </li>
           </ol>
         </article>
-      </section>
+      </section> */}
     </>
   );
 }

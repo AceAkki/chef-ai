@@ -8,9 +8,9 @@ export default function IngredientsSection(props) {
       <div className="get-recipe-container">
         <div>
           <h3>Ready for a Recipe ?</h3>
-          <p>Generate recipe based on the ingredients.</p>
+          <p>Generate recipe based on the Ingredients.</p>
         </div>
-        <button onClick={props.showRecipe}>Get a recipe !</button>
+        <button onClick={props.showRecipe} className="prompt-api-btn">Get a Recipe !</button>
       </div>
     ) : null;
   }
@@ -18,7 +18,7 @@ export default function IngredientsSection(props) {
   function createSection () {
     return (
     <section>
-      <h2 className="ingre-title">ingredients on hand</h2>
+      <h2 className="ingre-title">Ingredients in Hand</h2>
       <ul>{ingredientsElem}</ul>
       {loadPrompt()}
     </section>
