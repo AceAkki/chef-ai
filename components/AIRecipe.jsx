@@ -1,7 +1,6 @@
 import Markdown from 'react-markdown'
 
 export function AIRecipe(props) {
-  console.log(props.recipeData)
   return (
     <>
     <section className='recipe-container'>
