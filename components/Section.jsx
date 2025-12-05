@@ -5,7 +5,7 @@ import IngredientsSection from "./IngredientsSection";
 import { getRecipeFromMistral } from "../src/ai"
 
 export function Section() {
-  const [ingredients, setIngredients] = useState(["tomato", "apple", "peach", "carrot"]);
+  const [ingredients, setIngredients] = useState([]);
   const [recipeShown, setRecipeShown] = useState("");
   const recipeSection = useRef(null);
 
