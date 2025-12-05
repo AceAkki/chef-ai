@@ -6,7 +6,7 @@ export default function IngredientsSection(props) {
   function loadPrompt() {
     return props.ingredients.length >= 4 ? (
       <div className="get-recipe-container">
-        <div>
+        <div ref={props.setRef}>
           <h3>Ready for a Recipe ?</h3>
           <p>Generate recipe based on the Ingredients.</p>
         </div>

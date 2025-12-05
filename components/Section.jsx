@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { AIRecipe } from "./AIRecipe";
 import IngredientsSection from "./IngredientsSection";
 import { getRecipeFromMistral } from "../src/ai"
 
 export function Section() {
-  const [ingredients, setIngredients] = useState([]);
+  const [ingredients, setIngredients] = useState(["tomato", "apple", "peach", "carrot"]);
   const [recipeShown, setRecipeShown] = useState("");
+  const recipeSection = useRef(null);
+
+  useEffect(()=> {
+    if (recipeShown !== "" && recipeSection.current !== null) {
+      console.log(recipeSection);
+      recipeSection.current.scrollIntoView({behavior:"smooth"});
+    }
+  }, [recipeShown])
+
+ // recipeSection.scrollIntoView()
 
   //let ingredients = ["tomato", "apple", "peach", "carrot"];
   
@@ -53,7 +63,7 @@ export function Section() {
           <button> Add Ingredient </button>
         </form>
 
-        { <IngredientsSection ingredients={ingredients} showRecipe={showRecipe}/>}
+        { <IngredientsSection ingredients={ingredients} showRecipe={showRecipe} setRef={recipeSection}/>}
       </section>
 
       {(recipeShown.length > 0) ? <AIRecipe recipeData={recipeShown} /> : null }
